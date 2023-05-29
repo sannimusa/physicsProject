@@ -103,3 +103,53 @@ public class Energy{
 
             }
         });
+        // POTENTIAL ENERGY
+        calculatePe.addActionListener(e -> {
+            try {
+                double Mass = Double.parseDouble(PotentialEnergyMassInput.getText());
+                double Height = Double.parseDouble(PotentialEnergyHeightInput.getText());
+                double PotentialEnergy = Mass * Physics.getGravity() * Height;
+                JOptionPane.showMessageDialog(null, " Potential Energy = " + PotentialEnergy);
+            } catch (NumberFormatException nfe) {
+                JOptionPane.showMessageDialog(null, "Pls Input a Valid Number");
+
+            }
+        });
+        // POWER
+        calculatePower.addActionListener(e -> {
+            try{
+                double work = Double.parseDouble(PowerWorkInput.getText());
+                double time = Double.parseDouble(PowerTimeInput.getText());
+                double PotentialEnergy = work * time;
+                JOptionPane.showMessageDialog(null, " Potential Energy = " + PotentialEnergy);
+            }catch (NumberFormatException nfe) {
+                JOptionPane.showMessageDialog(null, "Pls Input a Valid Number");
+            }
+
+        });
+
+    }
+    public void drawKineticEnergyUI() {
+        KineticEnergyFrame = new JFrame("Kinetic Energy");
+        KineticEnergyFrame.add(mass);
+        KineticEnergyFrame.add(massInput);
+        KineticEnergyFrame.add(velocity);
+        KineticEnergyFrame.add(velocityInput);
+        KineticEnergyFrame.add(calculateKe);
+        KineticEnergyFrame.setLayout(new GridLayout(3,2));
+        KineticEnergyFrame.setSize(500, 400);
+        KineticEnergyFrame.setVisible(true);
+
+    }
+    public void drawPotentialEnergyUI() {
+        PotentialEnergyFrame = new JFrame("Potential Energy");
+        PotentialEnergyFrame.add(PotentialEnergyMass);
+        PotentialEnergyFrame.add(PotentialEnergyMassInput);
+        PotentialEnergyFrame.add(PotentialEnergyHeight);
+        PotentialEnergyFrame.add(PotentialEnergyHeightInput);
+        PotentialEnergyFrame.add(calculatePe);
+        PotentialEnergyFrame.setLayout(new GridLayout(3,2));
+        PotentialEnergyFrame.setSize(500, 400);
+        PotentialEnergyFrame.setVisible(true);
+        PotentialEnergyFrame.add(PotentialEnergyMass);
+    }
