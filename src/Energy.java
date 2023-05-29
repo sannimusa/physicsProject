@@ -174,3 +174,14 @@ public class Energy{
         ForceFrame.setLayout(new GridLayout(3,2));
         ForceFrame.setSize(500, 400);
         ForceFrame.setVisible(true);
+         }
+    public void drawWeight() {
+        WeightFrame = new JFrame("Weight");
+        WeightFrame.add(WeightMass);
+        WeightFrame.add(WeightMassInput);
+        WeightFrame.add(calculateWeight);
+        WeightFrame.setLayout(new GridLayout(3,2));
+        WeightFrame.setSize(500, 400);
+        WeightFrame.setVisible(true);
+    }
+}
