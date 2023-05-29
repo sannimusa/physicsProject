@@ -153,3 +153,24 @@ public class Energy{
         PotentialEnergyFrame.setVisible(true);
         PotentialEnergyFrame.add(PotentialEnergyMass);
     }
+     public void drawPower() {
+        PowerFrame = new JFrame("Power");
+        PowerFrame.add(PowerWork);
+        PowerFrame.add(PowerWorkInput);
+        PowerFrame.add(PowerTime);
+        PowerFrame.add(PowerTimeInput);
+        PowerFrame.add(calculatePower);
+        PowerFrame.setLayout(new GridLayout(3,2));
+        PowerFrame.setSize(500, 400);
+        PowerFrame.setVisible(true);
+    }
+    public void drawForce() {
+        ForceFrame = new JFrame("Force");
+        ForceFrame.add(ForceMass);
+        ForceFrame.add(ForceMassInput);
+        ForceFrame.add(ForceAcceleration);
+        ForceFrame.add(ForceAccelerationInput);
+        ForceFrame.add(calculatePower);
+        ForceFrame.setLayout(new GridLayout(3,2));
+        ForceFrame.setSize(500, 400);
+        ForceFrame.setVisible(true);
